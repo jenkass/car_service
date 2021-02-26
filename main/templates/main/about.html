@@ -1,0 +1,63 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block title %}О сайте{% endblock %}
+
+{% block content %}
+<section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/bg_2.jpg' %})" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url 'main:index' %}">Главная <i class="fa fa-chevron-right"></i></a></span> <span>О нас <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">О нас</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+    	<div class="container">
+    		<div class="row d-flex no-gutters">
+    			<div class="col-md-6 d-flex">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center mb-4 mb-sm-0" style="background-image:url({% static 'images/about.jpg' %})">
+    				</div>
+    			</div>
+    			<div class="col-md-6 pl-md-5">
+    				<div class="row justify-content-start py-5">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<span class="subheading">Добро пожаловать в наш автосервис</span>
+		            <h2 class="mb-4">Мы помогаем более 45 лет обслуживать автомобили</h2>
+		            <p>За время работы нашей СТО мы произвели большое число сервисных работ разной степени сложности. Такой опыт позволяет нам быстрее выполнять поставленные задачи.
+					</p>
+		            <div class="tabulation-2 mt-4">
+									<ul class="nav nav-pills nav-fill d-md-flex d-block">
+									  <li class="nav-item mb-md-0 mb-2">
+									    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Наша миссия</a>
+									  </li>
+									  <li class="nav-item px-lg-2 mb-md-0 mb-2">
+									    <a class="nav-link py-2" data-toggle="tab" href="#home2">Наша гарантия</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Наша ценность</a>
+									  </li>
+									</ul>
+									<div class="tab-content rounded mt-2">
+									  <div class="tab-pane container p-0 active" id="home1">
+									  	<p>Беремся за то, что умеем. Делаем качественно и с гарантией.</p>
+									  </div>
+									  <div class="tab-pane container p-0 fade" id="home2">
+									  	<p>Прозрачный процесс ремонта. Предоставим по запросу видеоотчет проделанной работы и пришлем фото в Viber.</p>
+									  </div>
+									  <div class="tab-pane container p-0 fade" id="home3">
+									  	<p>Мы не держим машину по 3 дня, а четко соблюдаем сроки. Мы понимаем, что Вы без машины как без рук!</p>
+									  </div>
+									</div>
+								</div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+{% endblock %}

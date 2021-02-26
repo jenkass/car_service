@@ -1,0 +1,29 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block title %}Мои заказы{% endblock %}
+
+{% block content %}
+        {% if order %}
+        {% for ord in order %}
+        {% csrf_token %}
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">{{ ord.category }}</h1>
+                <p class="lead">Вы записаны на {{ ord.date }}</p>
+                {% if ord.is_active == True %}
+                <p class="alert alert-success">Бронь подтверждена</p>
+                {% else %}
+                <p class="alert alert-warning">Бронь не подтверждена</p>
+                {% endif %}
+                <a href="{% url 'main:delete_order' pk=ord.pk %}" class="btn btn-danger">Удалить</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+         <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">У вас нет брони</h1>
+            </div>
+         </div>
+        {% endif %}
+{% endblock %}
